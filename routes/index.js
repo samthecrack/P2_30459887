@@ -4,11 +4,11 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  let name = ''
+  let name = 'Samuel Perez'
 
 
   res.render('index', {
-    title: 'Samuel Jose Perez Belisario Ci. 30.459.887 Seccion 3',
+    title: 'CURRICULUM VITAE',
     name: name,
   });
 });
