@@ -1,17 +1,18 @@
 const sqlite3 = require('sqlite3').verbose();
 
-let db = new sqlite3.Database(':memory:', (err) => {
+
+let db = new sqlite3.Database(':memory:',(err) => {
     if (err) {
         return console.error(err.message);
     }
     console.log('Connected to the in-memory SQlite database.');
 
-    db.run("CREATE TABLE IF NOT EXISTS contactos (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, cell TEXT NOT NULL, email TEXT NOT NULL, comment TEXT NOT NULL, date TEXT NOT NULL, ip TEXT NOT NULL)");
+    db.run("CREATE TABLE IF NOT EXISTS contactos (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, email TEXT NOT NULL, cell TEXT NOT NULL, comment TEXT NOT NULL, date TEXT NOT NULL, ip TEXT NOT NULL)");
 });
 
 module.exports = {
-    insert: function (name, email, cell, comment, date, ip) {
-        db.run("INSERT INTO contactos (name, email, cell, comment, date, ip) VALUES (?, ?, ?, ?, ?)", [name, Cell, email, comment, date, ip], function (err) {
+    insert: function (name, email, cell, comment, Datetime, ip) {
+        db.run("INSERT INTO contactos (name, email, cell, comment, date, ip) VALUES (?, ?, ?, ?, ?)", [name, email, cell, comment, Datetime, ip], function (err) {
             if (err) {
                 return console.log(err.message);
             }

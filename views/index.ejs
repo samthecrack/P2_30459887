@@ -8,10 +8,9 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <form class='form'>
+  <form class="form" action="/" method="post">
     <h2 class="form_title">Contacta conmigo!</h2>
-    <p class="form_paragraph">¿Desea ver mi curriculum? <a href="https://lewa.onrender.com" class="form_link">Pulsa aqui</a></p>
-
+    <p class="form_paragraph">¿Desea ver mi curriculum? <a href="/views/cv.html" class="form_link">Pulsa aqui</a></p>
     <div class="form_container">
       <div class="form_group">
         <input type="text" name="name" id="name" class="form_input" placeholder=" ">
@@ -20,21 +19,20 @@
       </div>
       <div class="form_group">
         <input type="email" name="email" id="email" class="form_input" placeholder=" ">
-        <label for="email" class="form_label">Correo</label>
+        <label for="email" class="form_label">Email</label>
         <span class="form_line"></span>
       </div>
       <div class="form_group">
-        <input type="text" name="cell" id="cell" class="form_input" placeholder=" ">
+        <input type="tel" name="cell" id="cell" class="form_input" placeholder=" ">
         <label for="cell" class="form_label">Celular</label>
         <span class="form_line"></span>
       </div>
       <div class="form_group">
-        <textarea name="comment" id="coment" cols="20" rows="5" class="form_input" placeholder=" "></textarea>
+        <textarea name="comment" id="comment" cols="20" rows="5" class="form_input" placeholder=" "></textarea>
         <label for="comment" class="form_label">Comentario</label>
         <span class="form_line"></span>
       </div>
-
-      <input type="submit" class="form_submit" value="Enviar">
+      <button type="submit" class="form_submit">Enviar</button>
     </div>
   </form>
 </body>
