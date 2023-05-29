@@ -9,11 +9,19 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const querystring = require('querystring')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
+const app = express();
+
+const request = require ('request');
+
+const fetch = require("isomorphic-fetch");
+
+const recaptchaSecretKey = '6Lf6RkomAAAAACwvi8LCjIwrv9YhifNHXMQxkMtu';
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
