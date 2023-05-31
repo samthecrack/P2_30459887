@@ -11,8 +11,8 @@ let db = new sqlite3.Database(':memory:',(err) => {
 });
 
 module.exports = {
-    insert: function (name, email, cell, comment, Datetime, ip, region) {
-        db.run("INSERT INTO contactos (name, email, cell, comment, date, ip, country) VALUES (?, ?, ?, ?, ?, ?, ?)", [name, email, cell, comment, Datetime, ip, region], function (err) {
+    insert: function (name, email, cell, comment, Datetime, myIP, country) {
+        db.run("INSERT INTO contactos (name, email, cell, comment, date, ip, country) VALUES (?, ?, ?, ?, ?, ?, ?)", [name, email, cell, comment, Datetime, myIP, country], function (err) {
             if (err) {
                 return console.log(err.message);
             }

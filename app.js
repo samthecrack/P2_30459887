@@ -3,24 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-const querystring = require('querystring')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
 const app = express();
-
 const request = require ('request');
 
-const fetch = require("isomorphic-fetch");
 
-const recaptchaSecretKey = '6Lf6RkomAAAAACwvi8LCjIwrv9YhifNHXMQxkMtu';
 
+//Variables de entorno
+process.env.hostemail = "smtp.hostinger.com";
+process.env.useremail = "test009@arodu.dev";
+process.env.passemail = "eMail.test009";
+process.env.fromemail = "test009@arodu.dev";
+process.env.SecretKey = "6Lf6RkomAAAAACwvi8LCjIwrv9YhifNHXMQxkMtu";
+process.env.Sitekey = "6Lf6RkomAAAAAJQTz7cReF5u_ncqmeckT-trRrry";
 
 
 // view engine setup

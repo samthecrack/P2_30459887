@@ -17,6 +17,7 @@
     "geoip-lite": "^1.4.7",
     "http-errors": "~1.6.3",
     "isomorphic-fetch": "^3.0.0",
+    "JSON": "^1.0.0",
     "maxmind": "^4.3.11",
     "maxmind-db-reader": "^0.2.1",
     "md5": "^2.3.0",
