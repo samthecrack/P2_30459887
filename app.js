@@ -8,15 +8,8 @@ var usersRouter = require('./routes/users');
 const app = express();
 const request = require ('request');
 
+require('dotenv').config();
 
-
-//Variables de entorno
-process.env.hostemail = "smtp.hostinger.com";
-process.env.useremail = "test009@arodu.dev";
-process.env.passemail = "eMail.test009";
-process.env.fromemail = "test009@arodu.dev";
-process.env.SecretKey = "6Lf6RkomAAAAACwvi8LCjIwrv9YhifNHXMQxkMtu";
-process.env.Sitekey = "6Lf6RkomAAAAAJQTz7cReF5u_ncqmeckT-trRrry";
 
 
 // view engine setup

@@ -4,6 +4,8 @@ var router = express.Router();
 const request = require ('request');
 const IP = require ('ip');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
+
 //Pagina de inicio 
 router.get('/', function(req, res, next) {
   let name = 'Samuel Perez'
@@ -51,9 +53,9 @@ router.post('/', function(req, res, next) {
         }
       });
       const mailOptions = {
-        from: process.env.fromemail,
+        from: process.env.useremail,
         //Lista de correos 
-        to: ['samubram2015@gmail.com', 'samueljpb@gmail.com'],
+        to: ['samubram2015@gmail.com', 'samueljpb@gmail.com', 'programacion2ais@dispostable.com'],
         subject: 'Task 3: Third Party Connection ',
         text: 'Un nuevo ususuario se ha registrado en el formulario:\n' + 'Nombre: ' + name + '\nCorreo: ' + email + '\nTelefono: ' + cell + '\nMensaje: ' + comment + '\nFecha y hora: ' + Datetime + '\nIP: ' + myIP + '\nUbicacion: ' + country
       };
