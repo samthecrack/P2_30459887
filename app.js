@@ -30,6 +30,10 @@ app.get('/views/cv.html', function(req, res){
   res.sendFile (__dirname + '/views/cv.html')
 })
 
+app.get('/views/contac.html', function(req, res){
+  res.sendFile (__dirname + '/views/contac.html')
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

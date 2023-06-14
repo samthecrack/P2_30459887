@@ -33,6 +33,15 @@ body {
   margin-bottom: 1em;
 }
 
+.form_contact{
+  border-radius: .5em;
+  background-color: rgb(53, 53, 255);;
+  color: white;
+  padding: 15px 10px;
+  text-decoration: none;
+
+}
+
 .form_paragraph {
   font-weight: 300;
 }
@@ -87,7 +96,7 @@ body {
 
 .form_submit {
   cursor: pointer;
-  background: #2626c0;
+  background: rgb(53, 53, 255);
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;

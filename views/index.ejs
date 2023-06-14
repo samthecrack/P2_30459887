@@ -26,8 +26,12 @@
 <body>
   <form class="form" action="/" method="post">
     <h2 class="form_title">Contacta conmigo!</h2>
-    <p class="form_paragraph">¿Desea ver mi curriculum? <a href="/views/cv.html" class="form_link">Pulsa aqui</a></p>
+    <p class="form_paragraph">¿Desea ver mi curriculum? <a target="_blank" href="/views/cv.html" class="form_link">Pulsa aqui</a></p>
+    
     <div class="form_container">
+
+      <a target="_blank" class="form_contact" href="/views/contac.html">Lista de contactos</a>
+
       <div class="form_group">
         <input type="text" name="name" id="name" class="form_input" placeholder=" ">
         <label for="name" class="form_label">Nombre</label>
@@ -53,6 +57,7 @@
       </div>
       <button type="submit" class="form_submit" > Enviar </button>
     </div>
+    
   </form>
 </body>
 </html>
