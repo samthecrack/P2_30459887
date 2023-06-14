@@ -6,7 +6,11 @@
     <style>
 
     </style>
-    
+    <meta property="og:title" content="Mi Curriculum">
+    <meta property="og:description" content="Este es mi curriculum vitae">
+    <meta property="og:image" content="https://mi-imagen.com/imagen.jpg">
+    <meta property="og:url" content="https://mi-sitio.com/mi-curriculum">
+  </head>
   </head>
   <body>
     <div>
