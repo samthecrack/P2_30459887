@@ -5,14 +5,41 @@ const request = require ('request');
 const IP = require ('ip');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
-const app = express();
+var app = require('../app');
 
 //Pagina de inicio 
 router.get('/', function(req, res, next) {
   let name = 'Samuel Perez'
   res.render('index', {
     title: 'Formulario de contacto',
-    name: name, });});
+    name: name, });
+});
+
+router.get('/login', (req, res) => {
+  res.render('login');
+ });
+
+ router.post('/login', function(req, res, next) {
+  let user = req.body.user
+  let pass = req.body.pass
+  if (user == process.env.username && pass == process.env.clave)  {
+    db.select(function (rows) {
+      // console.log(rows);
+      res.render('contactos', {rows: rows});
+    });
+  } else {
+    res.render('login', { error: 'Datos incorrectos' });
+  }
+})
+
+router.get('/contactos', function(req, res, next) {
+  db.select(function (rows) {
+    // console.log(rows);
+    res.render('contactos', {rows: rows});
+  });
+ 
+});
+
 
 
 //Ejecuta acciones del formulario
@@ -30,6 +57,9 @@ router.post('/', function(req, res, next) {
   let Datetime = fecha;
   let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   const myIP = ip.split(",")[0];
+
+  
+
 
 
   //Localizar pais de origen de la IP

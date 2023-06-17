@@ -1,5 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 
+
 let db = new sqlite3.Database(':memory:',(err) => {
     if (err) {
         return console.error(err.message);
@@ -10,6 +11,7 @@ let db = new sqlite3.Database(':memory:',(err) => {
 });
 
 module.exports = {
+    
     insert: function (name, email, cell, comment, Datetime, myIP, country) {
         db.run("INSERT INTO contactos (name, email, cell, comment, date, ip, country) VALUES (?, ?, ?, ?, ?, ?, ?)", [name, email, cell, comment, Datetime, myIP, country], function (err) {
             if (err) {
@@ -25,7 +27,6 @@ module.exports = {
                 throw err;
             }
             callback(rows);
-            res.render('vista', { registros: rows });
         });
     }
 }
